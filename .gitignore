@@ -1,0 +1,15 @@
+# ide config files
+.vscode
+.idea
+
+# python
+__pycache__
+
+# cpp
+*.out
+*.exe
+*.a
+
+# dir
+*build*
+temp
