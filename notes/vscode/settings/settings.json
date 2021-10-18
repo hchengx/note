@@ -1,0 +1,32 @@
+{
+    // 禁用VSC远程报告（推荐!）
+    "telemetry.enableTelemetry": false,
+    // 删除文件确认
+    "explorer.confirmDelete": false,
+    // 控制是否显示缩略图
+    "editor.minimap.enabled": false,
+    // 设置编辑区字体大小
+    "editor.fontSize": 16,
+    //设置编辑区字体
+    "editor.fontFamily": "JetBrains Mono",
+    "editor.fontLigatures": true,
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
+    "editor.semanticHighlighting.enabled": true,
+    "terminal.integrated.fontSize": 14,
+    // 设置文件自动保存为afterDelay (默认1000ms)
+    "files.autoSave": "afterDelay",
+    "workbench.settings.editor": "json",
+    "[log]": {
+        "editor.fontSize": 15
+    },
+    "extensions.ignoreRecommendations": true,
+    "explorer.confirmDragAndDrop": false,
+    "files.associations": {
+        // enable comments in json
+        "*.json": "jsonc"
+    }
+}

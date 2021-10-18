@@ -1,0 +1,85 @@
+{
+    "clangd.arguments": [
+        // 在后台自动分析文件（基于complie_commands)
+        "--background-index",
+        // 标记compelie_commands.json文件的目录位置
+        // 关于complie_commands.json如何生成可见我上一篇文章的末尾
+        "--compile-commands-dir=build",
+        // 同时开启的任务数量
+        "-j=12",
+        // "--folding-ranges"
+        // 告诉clangd用那个clang进行编译，路径参考which clang++的路径
+        "--query-driver=/usr/local/opt/llvm/bin/clang++",
+        // clang-tidy功能
+        "--clang-tidy",
+        "--clang-tidy-checks=performance-*,bugprone-*",
+        // 全局补全（会自动补充头文件）
+        "--all-scopes-completion",
+        // 更详细的补全内容
+        "--completion-style=detailed",
+        "--function-arg-placeholders",
+        // 补充头文件的形式
+        "--header-insertion=iwyu",
+        // pch优化的位置
+        "--pch-storage=memory",
+    ],
+    // clangd路径，通过mac终端 which clangd 命令得到
+    "clangd.path": "",
+    "editor.semanticTokenColorCustomizations": {
+        "enabled": true,
+        "rules": {
+            // 函数参数
+            "parameter": "#306b72",
+            // 类或者结构体
+            "class": {
+                "fontStyle": "bold",
+                "foreground": "#729de3"
+            },
+            // 普通函数
+            "function": {
+                "foreground": "#e5b124"
+            },
+            // 临时变量
+            "variable": "#26cdca",
+            // enum的名字（enum的成员似乎并没有可以配置的）
+            "enum": "#397797",
+            // enum子项，需要clangd12以上
+            "enumMember": "#397797",
+            // 宏
+            "macro": {
+                "foreground": "#8f5daf",
+                "fontStyle": "bold"
+            },
+            // 成员函数
+            "method": {
+                "foreground": "#e5b124",
+                "fontStyle": "underline"
+            },
+            // clangd12之后会将宏关闭的部分标为comment
+            "comment": "#505050",
+            // 命名空间
+            "namespace": {
+                "foreground": "#00d780",
+                "fontStyle": "bold"
+            },
+            // 只读量加粗
+            "*.readonly": {
+                "fontStyle": "bold"
+            },
+            // 只读量等效为宏
+            "variable.readonly": {
+                "foreground": "#8f5daf",
+                "fontStyle": "bold"
+            },
+            // 静态量（静态变量，静态函数）
+            "*.static": {
+                "fontStyle": "italic"
+            },
+            // 成员变量，似乎需要clangd12以上
+            "property": {
+                "foreground": "#7ca6b7",
+                "fontStyle": "underline"
+            },
+        }
+    }
+}
