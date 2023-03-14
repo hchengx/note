@@ -1,0 +1,58 @@
+	// Place your key bindings in this file to override the defaultsauto[]
+[
+	{ // TAB 切换下个suggestion
+		"key": "tab",
+		"command": "selectNextSuggestion",
+		"when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+	},
+	{
+		"key": "ctrl+n",
+		"command": "-selectNextSuggestion",
+		"when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+	},
+
+	{  // shift tab 切换上个 suggestion
+		"key": "shift+tab",
+		"command": "selectPrevSuggestion",
+		"when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+	},
+	{
+		"key": "ctrl+p",
+		"command": "-selectPrevSuggestion",
+		"when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+	},
+
+	{  // 关闭当前标签页
+		"key": "alt+w",
+		"command": "workbench.action.closeActiveEditor"
+	},
+	{  // 关闭当前标签页 (mac)
+		"key": "ctrl+w",
+		"command": "-workbench.action.closeActiveEditor"
+	},
+
+	{
+		"key": "alt+c",
+		"command": "editor.action.clipboardCopyAction"
+	},
+	{
+		"key": "ctrl+insert",
+		"command": "-editor.action.clipboardCopyAction"
+	},
+	{
+		"key": "alt+v",
+		"command": "editor.action.clipboardPasteAction"
+	},
+	{
+		"key": "ctrl+v",
+		"command": "-editor.action.clipboardPasteAction"
+	},
+	{
+		"key": "alt+a",
+		"command": "editor.action.selectAll"
+	},
+	{
+		"key": "ctrl+a",
+		"command": "-editor.action.selectAll"
+	}
+]
