@@ -1,5 +1,19 @@
 VScode 使用与配置
 
+## 快捷键
+
+### 切换不同标签页/标签页组
+
+`workbench.action.openEditorAtIndex1~9`
+
+`workbench.action.focus****EditorGroup`
+
+### 补齐
+
+1. 切换 suggestion `selectNextSuggestion` & `selectPrevSuggestion`
+2. 接受 suggestion `acceptSelectedSuggestion`
+
+
 ## C/C++
 
 ### clangd
